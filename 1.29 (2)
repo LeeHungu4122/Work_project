@@ -1,2 +1,11 @@
 Heidi SQL
 -> 각 테이블 이름에서 master 테이블과 다른 비슷한 이름의 테이블은 1:다 의 형태로 묶여있다.
+
+판매/재고관리 프로그램에서 전월,당월,증감,매입,매출 등의 부분들은 공통적으로 쓰이는 것들이고 이들은 group by 형태로 데이터베이스에서 묶여있다고 보면 된다.
+
+mssql에 있는 데이터가 현재 작업 데이터이고 이를 heidi에서 보기 위해서는 heidi 에서 로컬에 접속해야 한다.
+
+controller -> service -> serviceImpl -> mapper(DAO) -> sql.xml 순서로 타자. (Ctrl키 눌러가며 탐색)
+
+DTO -> VO
+DAO -> Mybatis 가 구현해 준다.
