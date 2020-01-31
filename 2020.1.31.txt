@@ -1,0 +1,3 @@
+cnt -> count
+
+페이지에서 f12눌러 console창 띄워서 오류 검사.
