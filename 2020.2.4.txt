@@ -1,0 +1,11 @@
+ encodeURIComponent() -> 문자열을 URI에 인코딩해 반환.
+
+$('#vat').val(); -> val 안의 값을 넣는것?
+
+json 은 자신이 만든 json 파일을 getJSON 형태로 링크해 사용 가능.
+
+flush() -> 현재 버퍼에 저장되어 있는 내용을 클라이언트로 전송하고 버퍼를 비운다.
+
+name description list_price discount_price, vat
+
+도서구매신청서 경비정산표/차량일지 비품구매신청서
