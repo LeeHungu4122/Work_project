@@ -1,0 +1,26 @@
+INSERT INTO `module`
+SELECT * FROM module_old_menu
+WHERE idmodule = 29;
+-> 해당 자료 옮기기
+
+@RequestMapping(value="/mRegItem1", method=RequestMethod.POST)
+여기서 RequestMethod.POST 와 GET 으로 나뉠 수 있다.
+POST 방식은 패킷안에 숨겨져서 전송이 된다.
+GET 방식은 헤어데 붙어서 전송되므로, 도메인 주소를 보면 내가 입력한 값이 노출되는 것을 알 수 있다.
+->
+ex) 아이디 비밀번호 등은 POST 방식으로 다루면 된다.
+
+Model 객체를 파라미터로 받아 데이터를 뷰로 넘길 수 있다.
+model.addAttribute(이름,값);
+jsp 파일에서 이 값들을 ${} 를 통해서 사용 가능하다.
+
+이와 비슷하게 ModelAndView(데이터와 뷰를 동시에 설정 가능.) 객체 사용법은
+ModelAndView 객체를 선언 및 생성하고
+후에 ModelAndVIew 객체를 이용해,
+ex) ModelAndView mv = new ModelAndVIew(); 를 public ModelAndView content() {} 이런식으로 이 안에 만들어 준다.
+그리고 mv.setViewName("뷰의 경로"); 이런식으로 이름을 설정해 만들어주고 
+데이터를 보낼땐 mv.addObject("변수이름", "데이터값"); 이런식으로 사용한다.
+그리고 ModelAndView 객체를 반환한다. return mv;                  *** jsp도 동일하게 사용 ***
+
+hashmap 은 key와 value 를 묶어 하나의 entry로 저장한다는 특징을 갖는다. hashing 을 사용하기 때문에 *** 많은 양의 데이터 ***를 검색하는데 뛰어나다.
+
