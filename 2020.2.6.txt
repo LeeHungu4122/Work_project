@@ -1,3 +1,4 @@
 containsKey("count")
 -> 해당 키 값이 hashmap에 있을 경우 true를 없을 경우 false를 넘겨준다.
 
+try catch finally -> try 와 finally 는 둘만 사용이 가능하며 finally의 역할은 최종적으로 무조건 실행하게되는 부분이다.
