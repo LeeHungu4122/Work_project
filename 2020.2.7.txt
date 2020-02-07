@@ -1,0 +1,8 @@
+form 을 싸고 action 을 넣어야 그 안의 기능들이 실행된다. action에 의해(찾기 기능 등...)
+
+ctrl + shift + [ -> eclipse 창에서 한 페이지를 분리할 수 있다.
+
+ctrl + h -> eclipse 창에서 파일 내에서의 검색이 가능하다.
+
+private 는 다른곳에서 바로 접근이 불가능 하므로 getter, setter 를 생성.
+(alt + shift + s 누른 후의 메뉴에서 getter setter 생성 버튼 찾아라...)
