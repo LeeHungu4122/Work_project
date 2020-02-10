@@ -1,0 +1,10 @@
+form 안에 button 사용시에 type 를 정하지 않으면 기본적으로 submit 으로 지정되어 있다.
+
+<select id="clientList" parameterType="clientVO" resultType="clientVO">
+-> parameterType 는 파라메터가 입력되는 타입
+resultType 는 결과값이 나오는 타입.
+
+sql문에서의 #{} 과 ${} 의 차이점
+-> 
+#{} = Parameter가 String 형태로 들어와 자동적으로 'Parameter' 형태가 된다. 보안측면에서 유리
+${} = Parameter가 바로 출력된다. 보안측면에서 불리
