@@ -1,0 +1,5 @@
+log4j2.xml 에서 
+
+<Root level="ERROR">
+
+부분의 ERROR를 DEBUG로 바꾸면 디버깅? 로그 오래걸리면 ERROR로 하자.
