@@ -1,0 +1,14 @@
+WHERE clientid BETWEEN #{fromKeyword} AND #{toKeyword}
+-> input의 이름을 {}안의 명으로 지정해 준 다음 각각의 입력값을 받아 와서 그 사이값을 clientid 값에 대입해 검색하는 형태
+
+value 속성은 <input> 요소의 type 속성값에 따라 다른 용도로 사용됩니다.
+type =>
+- “button”, “reset”, “submit” : 버튼 내의 텍스트를 정의함.
+- “hidden”, “password”, “text” : 입력 필드의 초깃값을 정의함.
+- “checkbox”, “image”, “radio” : 해당 입력 필드를 선택 시 서버로 제출되는 값을 정의함.
+<input> 요소의 type 속성값이 “file”인 경우에는 value 속성을 사용할 수 없습니다.
+
+cktopman.equals('') -> 대리님's choice
+cktopman != null 처럼 등호 비교 보다는 equals 를 이용한 비교가 더 편할 수도 있다.
+equals는 대상의 내용 자체를 비교하는 것이지만 == 연산자는 비교하고자 하는 대상의 주소값을 비교한다.
+
