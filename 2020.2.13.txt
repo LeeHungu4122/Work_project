@@ -1,0 +1,11 @@
+/admin 은 관리자페이지
+
+context-datasource.xml 에서 db 서버 정보 변경 가능.
+
+
+sitemesh -> 자동으로 css 등을 포함시켜주는 기능.
+
+보통 
+WEB-INF -> config -> sitemesh -> decorators.xml 에 기능들을 추가해 주고
+jsp -> common -> template -> default.jsp 에 그것들을 어디어디에 쓰겠다 하는 경로?를 명시해 준다.
+
