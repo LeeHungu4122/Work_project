@@ -1,0 +1,2 @@
+<a href="javascript:login();">로그인</a>
+-> a태그에 스크립트 걸때!
