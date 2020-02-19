@@ -1,0 +1,11 @@
+button -> onclick="javascript:alert('준비중 입니다.');"
+스크립트 설정이 되어있을 땐 javascript: 를 빼줘라
+페이지 연결시엔 onclick="location.href='index.do;'"
+
+a -> href="javascript:alert('준비중입니다.');"
+
+sitemesh 를 사용할때! 페이지 설정시에(default.jsp 나 admin.jsp 등으로 지정해 놓은 파일)
+엘리먼트 들이 배치되 있는 것을 보고 실제 적용하는 곳에서 적절하게 배치해야 한다.
+
+@ModelAttribute("이름") UserVO usrVO
+-> 이름 을 지어주고 그걸 어디서 가져온다 라는 걸 명시해줌.(해당 jsp페이지에서 사용 가능 ${} 형태로 값 가져오기.)
