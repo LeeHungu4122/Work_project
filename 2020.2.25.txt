@@ -1,0 +1,6 @@
+var petgender = f.querySelector("[name=pet_gender]:checked");
+-> 이런식으로 jquery 에서 체크칸 체크됐는지 확인 가능.
+
+input 태그의 required -> 값이 입력되지 않았거나 check/select 되지 않은 경우 브라우저에 있는 알림 화면이 나타나는 기능.
+
+script jquery form
