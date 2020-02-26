@@ -1,0 +1,38 @@
+톰캣 바꾼후 안된다면 톰캣설정에서 경로 바꾸기
+
+function idCheck(){
+		$.ajax({
+			type:"POST",
+			url:"idCheck.json",
+			data:{
+				"userId":$("#userId").val()
+			},
+			success:function(data){
+				if($.trim(data) == "Y"){
+					if($('#userId').val() != ''){
+						alert("사용가능한 아이디 입니다.");
+					}else if($('#userId').val() == ''){
+						alert("아이디를 입력해 주세요.");
+					}
+				}else if($.trim(data) == "N"){
+					if($('#userId').val() != ''){
+						alert("중복된 아이디 입니다.");
+						$('#userId').val('');
+						$('#userId').focus();
+					}
+				}
+			}
+		})
+	}
+
+-> ajax 비동기 통신 사용.
+
+태그의 value 값의 공백을 제거하고 싶을 때 
+-> $.trim($("#").val()) 을 사용하면 된다.
+
+onblur -> 해당 공간클릭 후 다른공간 클릭할 때 발생하는 이벤트
+
+@ModelAttribute("searchVO") FaqVO searchVO -> FaqVO 의 이름을 searchVO 로 지정해 놓고 그 파라미터들을 searchVO 라는 이름으로 내보내겠다는 거?
+(FAQ 검색기능에서 대리님이 ModelAttribute 에서 searchVO 만 추가수정해서 해결.)
+
+@#!@#!@$! 퇴근시간에 어제한 파인드미 부분 각 메뉴? 이름 클릭했을 때에도 적용되는것 해보기. !@#!@#!%$
