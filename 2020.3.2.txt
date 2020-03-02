@@ -1,0 +1,25 @@
+공지사항 체크시 팝업창 띄우는 것.
+
+ <div id="fileNmList" style="float:left">  <!-- 게시판 수정시 첨부파일 list -->
+
+	<ul id="fileUl">
+
+	  <c:forEach var="boardAtt" items="${boardAttList}" varStatus="i">
+
+	   <li id="'lii1'+${boardAtt.SEQ_POSTSX}">
+
+	   <input type="text" value="${boardAtt.TXT_ORGFIL}"><input type="button" value="삭제" onclick="removeFile('${boardAtt.SEQ_POSTSX}')">
+
+	   <input type="text" id="seq_postsx" name="seq_postsx" value="${boardAtt.SEQ_POSTSX}"/>
+
+	   </li>
+
+	</c:forEach>
+
+       </ul>
+
+    </div>
+
+
+--> form 에 method="post" enctype="multipart/form-data" 를 넣으면
+첨부파일에 쓰임.(파일전송? 등에 쓰이는 약속? 같은 것.)
