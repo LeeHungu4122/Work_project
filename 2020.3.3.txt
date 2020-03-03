@@ -1,0 +1,48 @@
+CONCAT(f.readPath,'/',f.fileName,'.',f.fileExt) brdImage
+
+-> brdImage라고 이름을 지정해 준것.
+
+이렇게 지정해 준 것은 실제 테이블에 있는 칼럼이 아닌 것이기 때문에 만약
+
+ON
+brdImage = f.fileId 이런식으로 비교하게 되면 성립이 되지 않는다.
+
+CONCAT(f.readPath,'/',f.fileName,'.',f.fileExt) = f.fileId 이런식으로
+컬럼간 비교를 해준다면 가능하다.
+CONCAT(f.readPath,'/',f.fileName,'.',f.fileExt) -> 이것도 컬럼이다.
+
+tb_board_notice b			
+LEFT JOIN tb_user u
+ON b.ntcRgstId = u.userId
+LEFT JOIN tb_file f
+ON b.ntcFileId = f.fileId
+
+위에서 tb_user u 부분이 원래 from 에서 , 형태로 붙은 것이었는데 , 형태로 붙게 될 경우
+이 다음에오는 left join 에 영향을 받기 때문에 바로 해당 테이블의 컬럼에 ON 해줘야 다음에 join하는 것과 연관되지 않게 되고
+오류를 막을 수 있다.
+
+
+1. submit
+
+<script>
+function form_submit() {
+document.id.action="link_page.html";
+document.id.submit();
+}
+</script>
+
+2. href (값을 정해야하는 프로퍼티)
+
+<script>
+function page_href() {
+location.href = "link_page.html";
+}
+</script>
+
+3. replace (파라미터로 동작하는 메소드)
+
+<script>
+function page_replace() {
+location.replace("link_page.html");
+}
+</script>

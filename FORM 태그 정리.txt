@@ -1,0 +1,33 @@
+<form action=result.jsp"></form> 을 이용해서 폼태그를 사용한다
+여기서 폼태그란 보여지는 모양을 말하는 것이다.
+action은 서버를 받아주는 이름이다.
+result.jsp 파일에 서버에서 받아주는 문구를 작성한다.
+
+type을 통해 text/password/submit 을 설정할 수 있다.
+<input type="타입명" name="서버에서 받을 이름">
+placeholder = "빈칸일때 보여줄 문구" 를 작성한다.
+required = "required"   미입력시 반드시 입력하게 할 때 사용한다.
+<input type="submit" value = "전송하기"> submit타입은 
+value라는 이름의 전송하기 칸을 만들고 누를 시에 서버로 전송시킨다.
+
+서버에서 받아주는 파일을 작성한다
+request.setCharacterEncoding("UTF-8")은 charset 처럼 
+UTF-8로 설정하여 글이 깨지지 않도록 설정한다.
+String name = request.getParameter("name") 폼태그에서
+name="설정한 name"을 String name 에 저장한다
+password ="설정한 password"를 String password 에 저장한다.
+
+placeholder 은 빈칸일때 보여주는 문구를 설정하는 것이므로 
+placeholder="이름입력" ,  placeholder="암호입력" 을 통해 위의 사진처럼 보이는 것이다.
+
+requirder 로 인해 빈칸일 때 반드시 입력하라는 경고창이 뜬다.
+checked ="checked"는 뒤에 저장된 변수 value로 인해 첫번째 변수 값에 무조건 클릭이 되어서 나타나는 것이다. 
+저 함수가 없다면 아무것도 체크되어 있지 않은 빈칸으로 나타나게 된다.
+
+method ="post"로 설정하면 URL에 GET방식이 아닌 POST방식으로 전송하기 때문에 id와 password가 나타나지 않게 된다.
+하지만, post 방식은 한글이 깨지기 때문에 그것을 방지하기 위해 UTF-8로 설정한다.
+폼태그 input type="raido" value="1"을 설정하면 jsp파일에서 gender을 출력하면 1이거나 2가 출력된다. 
+이때 선택한 항목은 남자이거나 여자를 선택하는 것이므로 (gender.equals("1")?"남자":"여자")를 이용해 
+선택한값이 1과 같으면 남자가 선택되고 선택한값이 1과 다르면 : 연산자뒤에있는 여자가 선택된다.
+input type = checkbox 는 체크하는 박스 칸을 나타낸다. 물론 여러개 선택이 가능하다
+<lebel>은 해당 박스 칸이 아니라 문자를 클릭해도 체크되도록 하는것이다.
