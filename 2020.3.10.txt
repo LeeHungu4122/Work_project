@@ -1,0 +1,39 @@
+일반회원3개 케어메이트3개 회원가입
+
+일반회원2개는 2단계회원가입과정까지 하기 (나머지는 안해도됨?) 사진까지
+
+홈케어신청 일반 아이디당 2개씩(2단계 진행한 2개)
+
+cat1       cat2                  cat3
+등록       사진누락
+dog1 dog2 dog3
+
+비번 : 1234qwer
+
+홈케어찾기에서 홈케어지원 케어메이트1명당 2개씩 하기 (다른 기능들도 보기)
+
+<div class="side_tm_top_menu clearfix">
+									<% if(session.getAttribute("loginId")==null) { %>
+										<a href="/member/login.do" class="side_tm_login">로그인해주세요.</a>	
+										<a href="/member/register.do" class="side_tm_join">회원가입</a>
+									<% }else {%>
+										<a href="/member/logout.do">로그아웃</a>										
+									<% } %>
+										<!--<a href="#">로그아웃</a></li>
+										<a href="#">마이페이지</a></li>--><!--로그인시 변경되는 메뉴(로그인/회원가입 대신)-->
+									</div><!--회원가입 로그인 메뉴 끝-->
+									<div class="side_tm_inquire_menu">
+										<div class="side_tm_member clearfix">											
+										<% if(session.getAttribute("loginPower").equals("ADM")){ %>
+											<a href="/admin/deshboard.do">관리자페이지</a>
+										<% } else { %>
+											<a href="/admin/deshboard.do">마이페이지</a>
+											<a href="/admin/deshboard.do">장바구니</a>
+										<% } %>
+											<a href="/board/qna/list.do">고객센터</a>
+										</div>
+									</div>
+
+유튜브 동영상 아이디 따와서 영상 등록하는페이지
+
+productidxs 상품코드
