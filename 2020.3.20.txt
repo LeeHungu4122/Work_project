@@ -1,0 +1,9 @@
+<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+
+-> post 타입에서 이걸 넣어줘야 정상 작동? 한다.
+
+csrf 공격?
+
+
+
+input select 등의 안에다 value 넣을 땐 c:out 안써도 상관없음. (컨트롤러단에서 받아오는 변수의 경우 사용.)
