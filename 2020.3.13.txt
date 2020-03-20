@@ -1,0 +1,11 @@
+충돌시에 해당 충돌파일 커밋 메뉴란에서 열어서 업데이트될 부분들 하나씩 선택해서 가져온 후 
+override commit 하면 된다.
+
+DefaultServiceImpl
+
+-> uploadfile 클래스 에서 가져온
+String path = fMap.get("server_path")+"/"+fMap.get("file_name")+"."+fMap.get("file_ext");
+url 에 파일 이름을 합쳐 한다.
+이걸 path 에 넣고 path 를 사용하면 (setImg 이미지 데이터에 넣기) 이미지가 나온다.
+
+검색시 ~ 갯수보기 코드 익히기!
