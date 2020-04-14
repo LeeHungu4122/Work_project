@@ -1,0 +1,24 @@
+브라우저에서 요청 URL 에 Parameter 에 따라 맞는 PageControllerMethod를 사용하고싶을 때 @RequestParam Annotation을 이용.
+
+1.@RequestParam() 을 생략한 방법
+
+2. required=false 를 직접 선언한 방법
+public String m4(@RequestParam(required=false) String name, @RequestParam(required=false) int age) {
+        return String.format("m4(): name=%s, age=%d", name, age);
+    }
+
+3. defaultValue를 설정하여 입력하지 않아도 기본값으로 입력받게 하는 방법
+
+public String m5(String name, @RequestParam(defaultValue="20") int age) {
+        return String.format("m5(): name=%s, age=%d", name, age);
+    }
+
+
+
+@PathVariable -> RequestParam과 비슷하지만 이런식으로 형태가 다르다.
+
+RequestParam : 
+http://192.168.0.1:8080?aaa=bbb&ccc=ddd
+
+PathVariable : 
+http://192.168.0.1:8080/bbb/ddd
