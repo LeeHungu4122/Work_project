@@ -1,0 +1,13 @@
+String Util 정리
+
+1. nvl -> String null 체크
+2. enterToBr -> \n 을 br태그로 변환
+3. enterToNull -> \n 을 null로 변환
+4. toInt -> String 객체 int로 변환
+5. lpad -> 왼쪽 공백을 특정문자로 채우기
+6. rpad -> 오른쪽 공백을 특정 문자로 채우기
+7. cutText -> 문자열 자르기 특정 길이만큼
+8. isEmpty -> String이 널인지 비어 있는지 체크
+9. replaceText -> 특정 값을 특정 값으로 변경하기
+10. removeAllTag -> 모든 태그 지우기(크로스사이트 스크립트 방지에 많이 쓰임.)
+11. nullTrim -> 빈 공백 제거

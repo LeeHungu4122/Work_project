@@ -1,0 +1,8 @@
+$("input[name='checkAgree1'].prop('checked')")
+체크시 true 아니면 false
+$("input[name='checkAgree1'].attr('checked')")
+체크시 checked 아니면 undefined
+$("input[type='checkAgree1'].is('checked')")
+체크시 true 아니면 false
+$("input[type='checkAgree1'].not('checked')")
+체크시 false 아니면 true

@@ -1,0 +1,86 @@
+자바스크립트 이벤트 종류!
+
+2. 기본 이벤트
+
+  ㅇ 요소에 개발자가 굳이 이벤트를 연결하지 않았음에도 기본적으로 실행되는 이벤트
+     - a 요소를 클릭 => 해당 경로로 페이지 이동
+     - 브라우저 화면에서 우측 마우스 버튼을 클릭 => ContextMenu 나타남
+     - form 요소 내 submit 버튼을 클릭 => 지정된 경로로 내용을 전송함
+
+
+3. 마우스 이벤트 
+
+  ㅇ click (onclick) : 마우스 버튼 클릭하고 버튼에서 손을 뗌
+     - 例) 요소.onclick = "이벤트 처리기";
+     - 例) 요소.addEventListener("click", 이벤트 처리기 또는 콜백함수);
+  ㅇ dblclick (ondbclick)  : 마우스 버튼을 두 번 연속 더블 클릭 함
+  ㅇ mousedown (onmousedown) : 마우스 클릭의 앞 절반 (버튼을 누름)
+  ㅇ mouseup (onmouseup) : 마우스 클릭의 뒤 절반 (버튼을 뗌)
+     - 드래그 앤 드롭 이벤트 : 위 두 이벤트(mousedown, mouseup)로도 구현 가능
+  ㅇ mouseover (onmouseover) : 마우스 포인터가 요소 위에 올라감
+  ㅇ mouseout (onmouseout) : 마우스 포인터가 요소 밖으로 벗어남
+  ㅇ mousemove (onmousemove) : 마우스 포인터가 움직임
+     - 마우스 커서가 해당 요소 내를 움직일 때
+     - 또는, 커서의 위치 확인에 유용함
+  ㅇ contextMenu : 마우스 우측 클릭시, 컨텍스트 메뉴 보이기 직전에 발생
+  ㅇ 마우스 휠 이벤트 등
+
+
+4. 드래그 앤 드롭 이벤트
+
+  ㅇ dragstart
+  ㅇ drag
+  ㅇ dragend
+  ㅇ dragenter
+  ㅇ dragover
+  ㅇ dragleave
+  ㅇ drop
+
+
+5. 키보드 이벤트 
+
+  ㅇ keydown (onkeydown) : 키를 누르는 순간
+  ㅇ keyup (onkeyup)   : 키를 눌렀다 떼는 순간
+  ㅇ keypress (onkeypress) : 키를 눌러 문자가 연결되었을 때 
+     - 즉, 화면에 글자가 완성되는 경우 만
+     - 한편, 누르고있는 동안 화면에 해당 키가 연이어 나타나듯이 해당 이벤트도 계속 발생됨
+
+
+6. 폼 이벤트
+
+  ㅇ submit (onsubmit) : 폼 제출 버튼을 누름
+     - 제출/전송 버튼을 누름 또는 텍스트 필드에서 엔터키를 누름
+  ㅇ reset (onrest) : 폼을 초기화하기 위함
+  ㅇ change (onchange) : 폼 필드에서 변경이 일어남
+     - input 요소의 텍스트 변동, radio 버튼의 클릭 등
+  ㅇ focus (onfocus) : 웹브라우저가 특정 요소에 집중함
+     - 해당 요소를 클릭, 마우스 커서를 놓을때 등
+  ㅇ blur (onblur)  : focus의 반대
+     - 탭 누름, 필드 밖을 클릭할 때 등
+  ㅇ select (onselect) : 텍스트 필드 등의 텍스트를 선택했을 때
+
+
+7. 문서(document)/창(window) 이벤트
+
+  ㅇ load (onload)  : HTML 문서 및 추가 자원(이미지 등)들을 모두 불러왔을 때 발생
+  ㅇ DOMContentLoaded : HTML 문서를 읽고 DOM 트리 구축을 완료할 때 발생
+     - 위 load와 달리, 이미지 로드,스타일시트 등을 기다리지 않고 바로 시작
+
+  ㅇ readystatechange (onreadystatechange)  ☞ XHR 프로퍼티 참조
+  ㅇ timeput (ontimeout)
+
+  ㅇ resize (onresize) : 요소 크기의 변동시
+     - 창의 최대화 버튼 또는 창의 크기를 조절
+  ㅇ scroll (onscroll) : 페이지 스크롤 이동 
+     - 스크롤바를 드래그하거나 또는 키보드(위/아래/home/end 등) 또는 마우스휠 사용
+  ㅇ unload (onunload) : 해당 페이지를 벗어남
+     - 다른 페이지로의 링크를 클릭, 브라우저 탭/창을 닫음 등
+
+
+8. 기타 이벤트
+
+  ㅇ 텍스트 입력 이벤트
+  ㅇ hashchange 이벤트  : 해시 변경시 이벤트 발생 
+     - [내부참고] ☞ location 객체 참조
+     - [외부참고] ☞ MDN web docs, w3schools 참조
+  ㅇ error (onerror) :  에러 발생 이벤트

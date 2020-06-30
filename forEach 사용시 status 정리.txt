@@ -1,0 +1,18 @@
+varStatus = "status" 로 지정 후 사용가능.
+
+
+${status.current} 현재 for문의 해당하는 번호
+
+${status.index} 0부터의 순서
+
+${status.count} 1부터의 순서
+
+${status.first} 첫 번째인지 여부
+
+${status.last} 마지막인지 여부
+
+${status.begin} for문의 시작 번호
+
+${status.end} for문의 끝 번호
+
+${status.step} for문의 증가값

@@ -1,0 +1,8 @@
+jstl 비교 구문
+
+== is JSTL eq 
+!=  is JSTL ne
+<   is JSTL lt
+>   is JSTL gt
+<= is JSTL le
+>= is JSTL ge

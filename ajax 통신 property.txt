@@ -1,0 +1,17 @@
+ajax 통신 property
+
+url : 요청이 전송되는 url이 포함된 문자열.
+type : http 요청방식 입니다.
+timeout : http 요청에 대한 제한 시간을 지정합니다.(단위:ms)
+success : http 요청 성공시 이벤트 핸들러입니다.
+error : http 요청 실패시 이벤트 핸들러 입니다.
+complete : http 요청 완료시 이벤트 핸들러 입니다.
+data : http 요청 후 return 하는 값 입니다.
+dataType : http 요청 후 return 하는 데이터의 Type을 지정합니다.(xml, html, script, json, jsonp, text)
+async : 요청시 동기 유무를 선택할 수 있습니다.(True/False)
+dataType : return 된 데이터의 Type 입니다.(xml, html, json, jsonp, script, text)
+cache : 브라우저에 의해 요청되는 페이지를 캐시할 수 있습니다.(True/False)
+beforeSend : Http 요청 전에 발생하는 이벤트 핸들러 입니다.
+global : 전역함수 활성 여부를 설정합니다.(True/False)
+
+불러다옹 매칭, 쇼핑몰, 앱 까지 사진다 찍어서 폴더별로 정리

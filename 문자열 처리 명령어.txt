@@ -1,0 +1,26 @@
+1) ASP
+
+Len(str)	길이 알아내기
+Ucase(str)
+Lcase(str)	해당 str을 대문자 또는 소문자로 변환한다.
+Left(str,x)
+Right(str,x)	해당 str의 왼쪽 또는 오른쪽 끝에서 해당 자릿수 만큼의 문자를 반환한다.
+Mid(str,x1,x2)	해당 str의 x1번째 글에서 x2 자리수 만큼의 문자를 반환한다.
+x2가 없으면 x1번째 글에서 끝까지 반환한다.
+Replace(str,str1,str2)	해당 str에서 str1 문자열을 str2 문자열로 교체한다.
+Ltrim(str) / Rtrim(str)
+Trim(str)	해당 str의 왼쪽 또는 오른쪽 끝의 공백을 없앤다.
+양쪽 끝의 공백을 모두 없앤다.
+Split(str,str1)	해당 str을 str1 문자열을 기준으로 분할하여 배열로 반환한다.
+Instr(시작위치,str,str1,비교상수)
+Instrrev(str,str1,시작위치,비교상수)	해당 str에서 처음 str1 문자가 나타나는 자리수를 반환한다.
+문자열 끝에서부터 처음 str1 문자가 나타나는 자리수를 반환한다.
+ 
+
+ 2) JSP
+
+str.length();             //문자열 길이
+str.toUpperCase();    //대문자로 변환
+str.toLowerCase();    // 소문자로 변환
+str.indexOf("JSP");    // 문자열의 위치 구하기
+str.replaceAll(" ",""); //문자열의 공백 없애기 

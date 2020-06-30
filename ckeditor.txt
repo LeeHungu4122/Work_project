@@ -1,0 +1,18 @@
+ckeditor config.js
+
+// 출력 문자에 p태그 삭제
+	config.enterMode = CKEDITOR.ENTER_BR
+	
+	// 빈태그 삭제 방지
+	CKEDITOR.dtd.$removeEmpty['i'] = false;
+	
+	// css 적용
+	config.allowedContent = true; //class 적용
+	CKEDITOR.dtd.$removeEmpty.span = 0; // span 태그 적용
+	
+	config.language='ko';						//언어설정	
+	config.startupFocus = true;					//시작시 포커스 설정
+	config.docType = "<!DOCTYPE html>";			//문서타입 설정S
+	config.htmlEncodeOutput = true;
+
+

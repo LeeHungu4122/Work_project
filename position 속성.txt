@@ -1,0 +1,40 @@
+position 속성값
+ 
+static 
+1. 문서 흐름에 따른 기본 위치 (기본값)
+2. top right bottom left 등 위치 속성 적용 안 됨
+ 
+absolute
+1. (static 이 아닌) 첫 번째 부모 요소가 없는 경우엔 브라우저 창 기준.
+2. (static 이 아닌) 첫 번째 부모 요소 있으면 해당 부모 요소 기준. 
+    즉, 부모 요소 기준으로 하려면, 부모 요소가 relative, absolute, fixed 속성 중 하나여야 함.
+3. 스크롤 하면 위치 변동.
+4. 정확한 위치는 top right bottom left 속성 이용해 정함.
+5. 해당 요소의 다음에 있던 요소가 그 자리 차지.
+
+relative 
+1. static일 때 해당 요소의 현재 기본 위치 기준 
+2. 정확한 위치는 top right bottom left 속성 이용.
+3. 해당 요소의 기본 위치가 빈 공간으로 유지
+
+fixed 
+1. 브라우저 창 기준.
+2. 정확한 위치는 top right bottom left 속성 이용해 정함.           
+3. 해당 요소의 다음에 있던 요소가 그 자리를 차지.
+4. 홈페이지 로딩 늦는 원인 될 수 있으니 사용 시 각별히 주의 !!  (맨 하단 참고)
+5. IE7 이상 지원
+
+sticky
+1. relative처럼 작동하다가, 설정된 top, right, bottom, left 값 위치 도달시 고정됨.
+2. 스크롤 상단 고정 메뉴 만들 때 사용.
+3. 브라우저에 따라 overflow:hidden 또는 overflow:auto 일 때 작동 안 될 수 있음.
+4. IE 지원 X
+
+unset
+속성을 부모로부터 상속받은 경우 그 상속값으로, 아니면 초기값으로 재설정
+ 
+inherit 
+부모 요소의 속성 상속
+ 
+initial 
+속성 초기화 

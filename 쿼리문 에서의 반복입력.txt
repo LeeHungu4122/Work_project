@@ -1,0 +1,32 @@
+[foreach]
+
+collection : parameterType으로 넘어온 map안에 list (map에 key값)
+
+item : collection을 사용할 변수 명
+
+seperator : 반복 문자열을 구분 할 문자
+
+
+
+	<insert id="registProductOptList" parameterType="map">
+		insert into tb_product_option
+		(
+			productIdx,
+			title,
+			name,
+			optionprice,
+			qty
+		)
+		values
+		<foreach collection="list" item="optList" separator=",">
+		(
+			#{list.productIdx},
+			#{list.title},
+			#{list.name},
+			#{list.optionprice},
+			#{list.qty}
+		)
+		</foreach>
+	</insert>
+
+
