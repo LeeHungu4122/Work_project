@@ -1,0 +1,97 @@
+한 컬럼에 여러개의 데이터가 , 형태로 저장되어있을 때
+-> c:forTokens 를 이용해 , 단위로 데이터를 가져올 수 있다.
+ex) <c:forTokens var="detail" items="${prdVO.detail_info}" delims=",">
+
+script 로 엘리먼트 이벤트 연결 -> bind
+
+
+// SMS 전송 부분에서 키입력 관련.(크기 출력)
+
+$(function() {
+	$('#textcontent').keyup(function (e){
+	/////////////////////////////////////////////////////////////
+        var content = $(this).val();
+        var str_length = Number($("#textcounter").html());
+        var onlySpc = /^[~!@#$%^&*()_+|<>?:{}]*$/; // 특수문자
+    	var onlyKor = /^[ㄱ-ㅎ|ㅏ-ㅣ]*$/; // 한글
+    	var onlyNum = /^[0-9]*$/; // 숫자
+    	var onlyEng = /^[a-zA-Z]*$/; // 영어
+    	var lastChar = content.charAt(content.length - 1);
+    	
+    	if(content != '') {
+    		//
+        	$("#textcontent").bind("paste", function(e) {
+        		
+        		var content = $("#textcontent").val();
+        		var i, test_str;
+        		var charLength3 = content.length;
+        		
+        		$("textcounter").html(charLength3);
+        		
+        		var str_length = Number($("#textcounter").html());
+        		
+            	for(i = 0; i < content.length; i++) {
+            		test_str = content.substring(i, i+1);
+            		
+            		if(onlyKor.test(test_str)) {
+            			charLength3 += 2;
+            			$("textcounter").html(charLength3);
+            		} else if(onlySpc.test(test_str)) {
+            			charLength3 += 2;
+            			$("textcounter").html(charLength3);
+            		} else {
+            			$("textcounter").html(charLength3);
+            		}
+            	}
+                
+        	});
+        	//
+    		
+        	var charLength = str_length;
+        	var charLength2 = content.length;
+        	
+        	if(onlyKor.test(lastChar)){
+        		charLength += 2;
+        		$('#textcounter').html(charLength);
+        	} else if(onlySpc.test(lastChar)) {
+        		charLength += 2;
+        		$('#textcounter').html(charLength);
+        	} else if(onlyNum.test(lastChar) || onlyEng.test(lastChar)){
+        		$('#textcounter').html(charLength2);
+        	}
+    	} else {
+        	var charLength = content.length;
+        	
+        	$('#textcounter').html(charLength);
+    	}
+    	
+    	var lastChar = content.charAt(content.length - 1);
+
+    	var str_length2 = Number($("#textcounter").html());
+    	
+    	if(event.keyCode === 8) {
+    		if(onlyKor.test(lastChar)) {
+    			str_length2 = str_length2 - 2;
+    			$("textcounter").html(str_length2);
+    		} else if(onlySpc.test(lastChar)) {
+    			str_length2 = str_length2 - 2;
+    			$("textcounter").html(str_length2);
+    		} else {
+    			str_length2 = str_length2 - 1;
+    			$("textcounter").html(str_length2);
+    		}
+    	}
+    	
+    });
+    
+    $('#textcontent').keyup();
+    /////////////////////////////////////////////////////////////////
+	
+	var onlySpc = /^[~!@#$%^&*()_+|<>?:{}]*$/; // 특수문자
+    var onlyKor = /^[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]*$/; // 한글
+	var onlyNum = /^[0-9]*$/; // 숫자
+	var onlyEng = /^[a-zA-Z]*$/; // 영어
+	
+	/* 붙여넣기 시의 글자 체크 */
+	
+});
