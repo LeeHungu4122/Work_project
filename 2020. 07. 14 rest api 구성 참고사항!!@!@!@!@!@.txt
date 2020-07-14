@@ -1,0 +1,9 @@
+RestController
+
+@CrossOrigin(origins = "*")
+
+String  형태가 Map<?,?> 으로 된다.(반환형태. ajax 형태로 보내므로)
+
+리턴을 맵형태로 집어넣고 맵을 보냄
+
+뷰 컨트롤러만 사용하고 나머지 데이터관련은 서버로...
