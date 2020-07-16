@@ -21,6 +21,3 @@ String  형태가 Map<?,?> 으로 된다.(반환형태. ajax 형태로 보내므
 @HeaderParam : 헤더에 있는 값을 꺼내온다.
 @Context : Request header 나 URI 정도 등등의 inject 정보를 사용할 수 있다.
 Produces 와 Consumes 차이 : @Produces 는 Accept 헤더를 참고하고 @Consumes 은 Content-Type 헤더를 참고함.
-
-
-쪽지, 바지, 초콜릿?, 삼계? 치약, 칫솔
