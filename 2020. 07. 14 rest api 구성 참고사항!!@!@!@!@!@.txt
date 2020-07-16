@@ -7,3 +7,20 @@ String  형태가 Map<?,?> 으로 된다.(반환형태. ajax 형태로 보내므
 리턴을 맵형태로 집어넣고 맵을 보냄
 
 뷰 컨트롤러만 사용하고 나머지 데이터관련은 서버로...
+
+@Path : 실제 요청 URL 을 나타낸다. 
+이 어노테이션은 클래스 선언부, 메서드 선언부 모두 위치 가능하며 클래스 선언부에 @Path("/sample"), 메서드 선언부에 @Path("/xml")이라고 설정한다면 해당 메서드의 호출은 /api/sample/xml 이 된다.
+여기서 /api 는 web.xml 파일에 설정된 Jersey URL 이다.
+@GET : GET 방식으로 데이터 추출, 선택가능한 옵션은 @PUT, @DELETE, @POST 등이 있다.@Consumes : 수신하고자 하는 데이터 포멧을 정의한다.
+@Produces : 출력하고자 하는 데이터 포맷을 정의한다. 여기서 사용하는 포맷은 "application/json", "text/xml" 이고 각각 json, xml 타입으로 데이터를 출력한다.
+기타 선택가능한 옵션은 "application/atom+xml", "application/x-www-form-urlencoded", "application/octet-stream", "application/svg+xml", "application/xhtml_xml", "application/xml", "multipart/form-data", "text/html", "text/plain" 등이 있다.
+@QueryParam : URI 쿼리 파라미터의 값을 꺼내온다.
+@FormParam : Form 값이 전송된 경우 Form 안의 값들을 꺼내온다.
+@PathParam : URI template 에 명시되어 있는 값을 꺼내온다.
+@CookieParam : 쿠키에 있는 값을 꺼내온다.
+@HeaderParam : 헤더에 있는 값을 꺼내온다.
+@Context : Request header 나 URI 정도 등등의 inject 정보를 사용할 수 있다.
+Produces 와 Consumes 차이 : @Produces 는 Accept 헤더를 참고하고 @Consumes 은 Content-Type 헤더를 참고함.
+
+
+쪽지, 바지, 초콜릿?, 삼계? 치약, 칫솔
